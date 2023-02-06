@@ -1,7 +1,17 @@
 <h1>My app</h1>
+<label>Server Name</label>
+<input type="text" class="form-control" (input)="onUpdateServerName($event)">
+<!-- <p>{{ serverName }}</p> -->
+<label>Server Type</label>
+<input type="text" class="form-control" [(ngModel)]="serverType">
+<!-- <p>{{ serverType }}</p> -->
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+<!-- <p [innerText]="allowNewServer"></p> -->
+<p>{{ serverCreationStatus }}</p>
+
+<label>Test</label>
+<input type="text" [(ngModel)]="username">
+<p>{{ username }}</p>
+<button [disabled]="username.length === 0" (click)="onUpdateUsername()">Reset</button>
 
 <app-server></app-server>
-
-<app-success-alert></app-success-alert>
-
-<app-warning-alert></app-warning-alert>
