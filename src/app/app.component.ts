@@ -10,8 +10,11 @@ export class AppComponent implements OnInit{
   serverCreationStatus = "No server was created";
   serverName = '';
   serverType = '';
-
-  username = '';
+  serverCreated = false;
+  servers = ["Test Server", "Production Server", "Database-only Server"]
+  test = false;
+  testNum = 1;
+  testArr = []
 
   constructor() {
     setTimeout(() => {
@@ -24,6 +27,8 @@ export class AppComponent implements OnInit{
   }
 
   onCreateServer() {
+    this.serverCreated = true;
+    this.servers.push(this.serverName)
     this.serverCreationStatus = "Server was created! Name is " + this.serverName + " and the type is " + this.serverType;
   }
 
@@ -31,7 +36,10 @@ export class AppComponent implements OnInit{
     this.serverName = (<HTMLInputElement>input.target).value
   }
 
-  onUpdateUsername() {
-    return this.username = ''
+  onTestUpdate() {
+    this.test = !this.test;
+    this.testArr.push(this.testNum);
+    this.testNum++;
+    console.log(this.testArr)
   }
 }
