@@ -4,10 +4,11 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ShoppingListComponent } from './feature-shopping/shopping-list/shopping-list.component';
-import { ShoppingListEditComponent } from './feature-shopping/shopping-list-edit/shopping-list-edit.component';
-import { RecipeListComponent } from './feature-recipe/recipe-list/recipe-list.component';
-import { RecipeItemComponent } from './feature-recipe/recipe-item/recipe-item.component';
-import { RecipeDetailComponent } from './feature-recipe/recipe-detail/recipe-detail.component';
+import { ShoppingListEditComponent } from './feature-shopping/shopping-list/shopping-list-edit/shopping-list-edit.component';
+import { RecipeListComponent } from './feature-recipe/recipes/recipe-list/recipe-list.component';
+import { RecipeItemComponent } from './feature-recipe/recipes/recipe-list/recipe-item/recipe-item.component';
+import { RecipeDetailComponent } from './feature-recipe/recipes/recipe-detail/recipe-detail.component';
+import { RecipesComponent } from './feature-recipe/recipes/recipes.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { RecipeDetailComponent } from './feature-recipe/recipe-detail/recipe-det
     RecipeListComponent,
     RecipeItemComponent,
     RecipeDetailComponent,
+    RecipesComponent,
   ],
   imports: [
     BrowserModule,
