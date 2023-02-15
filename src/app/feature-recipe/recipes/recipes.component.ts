@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./recipes.component.css']
 })
 export class RecipesComponent {
+  recipeDetails: {name: string, description: string} = {
+    name: "",
+    description: ""
+  }
 
+  findRecipeDetails(recipe) {
+    this.recipeDetails = recipe
+  }
 }
