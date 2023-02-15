@@ -10,7 +10,7 @@ export class RecipeItemComponent {
   @Input() listRecipe: Recipe;
   @Output() selectedRecipe = new EventEmitter<void>()
 
-  constructor() {};
+  constructor() { };
 
   clickedRecipe() {
     this.selectedRecipe.emit()
