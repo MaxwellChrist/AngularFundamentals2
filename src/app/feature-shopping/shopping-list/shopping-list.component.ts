@@ -11,4 +11,9 @@ export class ShoppingListComponent {
     new Ingredient('Apricots', 8),
     new Ingredient('Bananas', 3)
   ];
+  
+  updateList(event) {
+    console.log(event)
+    this.ingredients.push(event)
+  }
 }
