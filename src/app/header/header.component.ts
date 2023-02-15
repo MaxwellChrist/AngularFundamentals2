@@ -14,8 +14,7 @@ export class HeaderComponent implements OnInit{
 
   ngOnInit(): void {};
 
-  newLink(str) {
-    console.log(str);
-    this.outputLink.emit(str);
+  newLink(event) {
+    this.outputLink.emit(event.target.text);
   }
 }
