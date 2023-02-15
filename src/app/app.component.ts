@@ -6,11 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-
+  link: string = "";
   constructor() {
   }
 
   ngOnInit() {
 
+  }
+
+  newLink(str) {
+    this.link = str;
   }
 }
