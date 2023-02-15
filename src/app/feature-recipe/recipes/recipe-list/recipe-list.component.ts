@@ -12,7 +12,7 @@ export class RecipeListComponent {
     new Recipe('Test Recipe 2', "this is a second test", "https://cdn.britannica.com/98/235798-050-3C3BA15D/Hamburger-and-french-fries-paper-box.jpg"),
   ];
 
-  @Output() selectedRecipeFromList = new EventEmitter<{name: string, description: string}>();
+  @Output() selectedRecipeFromList = new EventEmitter<Recipe>();
 
   foundRecipe(recipe) {
     this.selectedRecipeFromList.emit(recipe)
