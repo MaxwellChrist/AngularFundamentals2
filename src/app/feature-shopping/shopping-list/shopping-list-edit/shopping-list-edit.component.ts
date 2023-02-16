@@ -16,7 +16,6 @@ export class ShoppingListEditComponent implements OnInit{
   ngOnInit() {}
 
   addIngredient() {
-    console.log(this.nameInput)
     const ingredientFromInput = new Ingredient(this.nameInput.nativeElement.value, this.amountInput.nativeElement.value)
     this.newIngredient.emit(ingredientFromInput)
   }

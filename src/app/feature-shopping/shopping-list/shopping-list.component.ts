@@ -12,8 +12,7 @@ export class ShoppingListComponent {
     new Ingredient('Bananas', 3)
   ];
   
-  updateList(event) {
-    console.log(event)
+  updateList(event: Ingredient) {
     this.ingredients.push(event)
   }
 }

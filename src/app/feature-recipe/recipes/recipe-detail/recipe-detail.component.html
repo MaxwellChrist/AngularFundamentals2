@@ -9,15 +9,27 @@
     </div>
 </div>
 <div class="row">
-    <div class="col">
-            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Manage Recipe</button>
-            <ul class="dropdown-menu">
+    <div class="col dropdown">
+            <button appDropdown type="button" class="btn btn-primary dropdown-toggle">Manage Recipe</button>
+            <ul #showDropdown class="dropdown-menu">
                 <li class="dropdown-item"><a href="#">Add to shopping list</a></li>
                 <li class="dropdown-item"><a href="#">Edit Recipe</a></li>
                 <li class="dropdown-item"><a href="#">Delete Recipe</a></li>
             </ul>
     </div>
 </div>
+
+<!-- <div class="row">
+    <div class="col dropdown">
+            <button *appDropdown type="button" class="btn btn-primary">Manage Recipe</button>
+            <ul #viewDropdown class="dropdown-menu">
+                <li class="dropdown-item"><a href="#">Add to shopping list</a></li>
+                <li class="dropdown-item"><a href="#">Edit Recipe</a></li>
+                <li class="dropdown-item"><a href="#">Delete Recipe</a></li>
+            </ul>
+    </div>
+</div> -->
+
 <div class="row">
     <div class="col">
         <h1>{{ newRecipeDetails.description }}</h1>
