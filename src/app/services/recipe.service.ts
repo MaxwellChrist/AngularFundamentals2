@@ -1,0 +1,21 @@
+import { Injectable, OnInit } from "@angular/core";
+import { Recipe } from "../feature-recipe/recipes/recipe.model";
+
+@Injectable({providedIn: 'root'})
+
+export class RecipeService implements OnInit{
+    private recipes: Recipe[] = [
+        new Recipe('Test Recipe 1', "this is a test", "https://static01.nyt.com/images/2022/03/02/dining/kc-pasta-amatriciana/merlin_201502869_17a64c2f-adee-4526-9951-a0b03270b022-articleLarge.jpg?quality=75&auto=webp&disable=upscale"),
+        new Recipe('Test Recipe 2', "this is a second test", "https://cdn.britannica.com/98/235798-050-3C3BA15D/Hamburger-and-french-fries-paper-box.jpg"),
+    ];
+
+    getRecipes() {
+        return this.recipes.slice();
+    }
+
+    constructor() {}
+
+    ngOnInit(): void {
+        
+    }
+}
