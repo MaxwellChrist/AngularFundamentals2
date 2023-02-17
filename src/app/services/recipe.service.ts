@@ -1,4 +1,4 @@
-import { Injectable, OnInit } from "@angular/core";
+import { EventEmitter, Injectable, OnInit } from "@angular/core";
 import { Recipe } from "../feature-recipe/recipes/recipe.model";
 
 @Injectable({providedIn: 'root'})
@@ -9,13 +9,14 @@ export class RecipeService implements OnInit{
         new Recipe('Test Recipe 2', "this is a second test", "https://cdn.britannica.com/98/235798-050-3C3BA15D/Hamburger-and-french-fries-paper-box.jpg"),
     ];
 
+    recipeSelected = new EventEmitter<Recipe>()
+
+    constructor() {}
+
+    ngOnInit(): void {}
+
     getRecipes() {
         return this.recipes.slice();
     }
 
-    constructor() {}
-
-    ngOnInit(): void {
-        
-    }
 }
