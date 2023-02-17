@@ -23,4 +23,9 @@ export class ShoppingService implements OnInit {
     this.ingredientsChanged.emit(this.ingredients.slice())
   }
 
+  addIngredientToShoppingList(ingredientList: Ingredient[]) {
+    this.ingredients.push(...ingredientList)
+    return this.ingredients.slice()
+  }
+
 }
